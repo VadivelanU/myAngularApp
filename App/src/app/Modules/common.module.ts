@@ -8,9 +8,10 @@ import { NotFound } from "../Components/NotFound/not-found.component";
   providers: [],
   imports: [
     RouterModule.forChild([
-      { path: "", component: Home },
+      { path: "myAngularApp", component: Home },
+      { path: "", redirectTo:"myAngularApp", pathMatch:"full" },
       {
-        path: "aboutMe",
+        path: "myAngularApp/aboutMe",
         loadChildren: "./about-me.module#AboutMeModule"
       },
       {
