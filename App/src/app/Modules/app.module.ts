@@ -14,7 +14,8 @@ import { Navigator } from "../Components/Navigator/navigator.component";
   imports: [
     BrowserModule,
     CommonModule,
-    RouterModule.forRoot([], { enableTracing: true })
+    //used hash routing as i would navigate/jump to any component by the URL
+    RouterModule.forRoot([], { enableTracing: true, useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
