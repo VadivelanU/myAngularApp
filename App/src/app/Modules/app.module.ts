@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '../Modules/common.module';
 
@@ -13,6 +14,7 @@ import { Navigator } from "../Components/Navigator/navigator.component";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     CommonModule,
     //used hash routing as i would navigate/jump to any component by the URL
     RouterModule.forRoot([], { enableTracing: true, useHash: true })
