@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
-import { Route, RouterModule } from "@angular/router";
+import { RouterModule } from "@angular/router";
+import { CommonModule } from '@angular/common';
 
 import { Home } from "../Components/Home/home.component";
 import { NotFound } from "../Components/NotFound/not-found.component";
@@ -7,8 +8,10 @@ import { NotFound } from "../Components/NotFound/not-found.component";
   declarations: [Home, NotFound],
   providers: [],
   imports: [
+    CommonModule,
     RouterModule.forChild([
       { path: "home", component: Home },
+      //{ path: "", component: Home },
       { path: "", redirectTo:"home", pathMatch:"full" },
       {
         path: "aboutMe",
@@ -20,6 +23,5 @@ import { NotFound } from "../Components/NotFound/not-found.component";
     ])
   ]
 })
-export class CommonModule {
-
+export class AppCommonModule {
 }

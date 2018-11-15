@@ -12,8 +12,9 @@ export class AppComponent implements OnInit {
     setInterval(() => {this.getDateTime()}, 500);
   }
   getDateTime() {
-    var date: Date = new Date();
-    this.dateInfo = "Current Time : " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + " TimeZone-Offset: " + date.getTimezoneOffset() / 60;
+    //var date: Date = new Date();
+    //this.dateInfo = "Current Time : " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + " TimeZone-Offset: " + date.getTimezoneOffset() / 60;
+    this.dateInfo = new Date().toString();
     //Set timeout Executes the specified function after specified amount of time.
     //setTimeout(this.getDateTime(), 500);
   }
