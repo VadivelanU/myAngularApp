@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppCommonModule } from '../Modules/common.module';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from '../Components/app/app.component';
 import { Navigator } from "../Components/Navigator/navigator.component";
 
@@ -14,6 +15,8 @@ import { Navigator } from "../Components/Navigator/navigator.component";
   ],
   imports: [
     BrowserModule,
+    //place this always below browsermodule
+    HttpClientModule,
     FormsModule,
     CommonModule,
     AppCommonModule,

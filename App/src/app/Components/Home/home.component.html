@@ -1,3 +1,27 @@
 <div style="text-align:center">
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
+<div class="row">
+  <div class="col-sm-6">
+    <input type="text" #cityName autocomplete="false" placeholder="Enter City Name">
+  </div>
+  <div class="col-sm-6">
+    <input type="button" value="Get Weather" (click)="getWeather(cityName.value)">
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6" *ngIf="temperatureDetails">
+    Temperature details:
+    Temperature : {{temperatureDetails.temp}}
+    Max Temperature : {{temperatureDetails.temp_max}}
+    Min Temperature : {{temperatureDetails.temp_min}}
+    Humidity : {{temperatureDetails.humidity}}
+    Pressure : {{temperatureDetails.pressure}}
+  </div>
+  <div class="col-sm-6" *ngIf="weatherDescription">
+    Description:
+    <span *ngFor="let item of weatherDescription">
+      {{item.main}} : {{item.description}}
+    </span>
+  </div>
+</div>
